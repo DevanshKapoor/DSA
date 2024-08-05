@@ -40,19 +40,38 @@ void Inorder(struct Node* n){
     
 }
 
-
+void BFS(struct Node* n){
+    queue<struct Node*> qu;
+    qu.emplace(n);
+    while(!qu.empty()){
+        n=qu.front();
+        qu.pop();
+        cout<<n->data;
+        if(n->left!=NULL){
+          qu.emplace(n->left);  
+        }
+        if(n->right!=NULL){
+          qu.emplace(n->right);
+        }
+        
+    }
 }
+
 
 int main() {
     struct Node* root=new Node(1);
     root->left=new Node(2);
     root->right=new Node(3);
+    root->right->left=new Node(4);
+    root->right->left->right=new Node(5);
     cout<<"\nPreorder: ";
     Preorder(root);
     cout<<"\nInorder: ";
     Inorder(root);
     cout<<"\nPostorder: ";
     Postorder(root);
+    cout<<"\nBFS: ";
+    BFS(root);
 
     return 0;
 }
