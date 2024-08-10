@@ -17,6 +17,12 @@ struct treeNode{
 class Solution{
     public:
 
+    int diameter(treeNode* root){
+        int dia=0;
+        treeHeight(root,dia);
+        return dia;
+    }
+
     int treeHeight(treeNode* root,int & diameter){
         
         if(root==NULL) return 0;
@@ -33,7 +39,7 @@ int main() {
     root->right=new treeNode(1);
     root->left->right=new treeNode(1);
     Solution sol;
-    cout<<"maximum height is : "<<sol.treeHeight(root)<<endl;
+    cout<<"maximum diameter of tree is : "<<sol.diameter(root)<<endl;
 
     return 0;
 }
