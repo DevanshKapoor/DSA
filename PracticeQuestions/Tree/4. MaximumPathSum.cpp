@@ -11,7 +11,7 @@ struct treeNode{
         left=right=NULL;
     }
 };
-    
+
 class Solution{
     public:
     int maxPathSum(treeNode* root){
