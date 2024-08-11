@@ -40,6 +40,6 @@ int main() {
     root->left->right=new treeNode(1);
     Solution sol;
     cout<<"maximum diameter of tree is : "<<sol.diameter(root)<<endl;
-
+    
     return 0;
 }
