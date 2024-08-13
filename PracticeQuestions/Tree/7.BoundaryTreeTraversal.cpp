@@ -1,7 +1,10 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-//maximum path sum
+//boundary tree traversal
+// first root then left boundary excluding leaf
+// then leaf nodes usinf any dfs (eg: preorder)
+// then right boundary excluding leaf
 struct treeNode{
     int data;
     treeNode* right;
@@ -95,10 +98,11 @@ int main() {
     Solution sol;
     vector<int> vec;
     vec=sol.boundaryTreeTraversal(root);
+    cout<<"boundary traversal is :"<<endl;
     for(int num:vec){
         cout<<num<<endl;
     }
-    // cout<<"maximum path Sum is : "<<<<endl;
+
     
     return 0;
 }
