@@ -76,9 +76,9 @@ class Solution{
     vector<int> boundaryTreeTraversal(treeNode* root){
         vector<int>vec;
         vec.push_back(root->data);
-        leftTraversal(vec, root);
+        if(root->left) leftTraversal(vec, root);
         leafTraversal(vec, root);
-        rightTraversal(vec, root);
+        if(root->right) rightTraversal(vec, root);
 
         return vec;
     }
