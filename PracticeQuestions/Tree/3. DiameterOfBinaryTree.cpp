@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 //height of binary tree.
-//1+max(l+r).
+//1+max(l,r).
 struct treeNode{
     int data;
     treeNode* right;
@@ -15,6 +15,16 @@ struct treeNode{
 };
     
 class Solution{
+    
+    int treeHeight(treeNode* root,int & diameter){
+        
+        if(root==NULL) return 0;
+        int lh=treeHeight(root->left,diameter);
+        int rh=treeHeight(root->right,diameter);
+        diameter=max(diameter,lh+rh);
+        return 1+max(lh,rh);
+    }  
+
     public:
 
     int diameter(treeNode* root){
@@ -23,14 +33,7 @@ class Solution{
         return dia;
     }
 
-    int treeHeight(treeNode* root,int & diameter){
-        
-        if(root==NULL) return 0;
-        int lh=treeHeight(root->left,diameter);
-        int rh=treeHeight(root->right,diameter);
-        diameter=max(diameter,lh+rh);
-        return 1+max(lh,rh);
-    }    
+      
 };
 
 int main() {
