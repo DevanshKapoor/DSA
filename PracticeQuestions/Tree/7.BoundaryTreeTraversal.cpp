@@ -101,8 +101,6 @@ int main() {
     cout<<"boundary traversal is :"<<endl;
     for(int num:vec){
         cout<<num<<endl;
-    }
-
-    
+    }  
     return 0;
 }
