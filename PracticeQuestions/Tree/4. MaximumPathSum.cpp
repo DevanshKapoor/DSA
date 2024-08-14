@@ -22,8 +22,9 @@ class Solution{
    
     int maxPath(treeNode* root,int & maxi){
         if(root==NULL) return 0;
-        int maxL= maxPath(root->left,maxi);
-        int maxR = maxPath(root->right,maxi);
+        int maxL= max(0, maxPath(root->left, maxi));
+        int maxR = max(0, maxPath(root->right, maxi));
+        
         
         maxi= max(maxi,root->data+maxL+maxR);//stores maximum path sum till current node propogation
         return max(maxL, maxR)+root->data;//returns maximum of left or right to its parent node.
