@@ -76,3 +76,21 @@ int main(){
 }
 
 
+//WEIGHTED GRAPH
+//adjacency list
+int main(){
+    int n,m;
+    cin>>n>>m;
+    //1 based indexing
+    vector<pair<int,int>> adj[n+1];
+
+    for(int i=0;i<m;i++){
+        int u,v,weight;
+        cin>>u>>v>>weight;
+        adj[u].push_back({u,weight});
+        //no edge from v to u
+    }
+    return 0;
+}
+
+
