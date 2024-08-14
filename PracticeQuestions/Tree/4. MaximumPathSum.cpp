@@ -13,13 +13,6 @@ struct treeNode{
 };
 
 class Solution{
-    public:
-    int maxPathSum(treeNode* root){
-        int maxi=INT_MIN;
-        maxPath(root,maxi);
-        return maxi;
-    }
-   
     int maxPath(treeNode* root,int & maxi){
         if(root==NULL) return 0;
         int maxL= max(0, maxPath(root->left, maxi));
@@ -28,7 +21,16 @@ class Solution{
         
         maxi= max(maxi,root->data+maxL+maxR);//stores maximum path sum till current node propogation
         return max(maxL, maxR)+root->data;//returns maximum of left or right to its parent node.
-    }    
+    } 
+    
+    public:
+    int maxPathSum(treeNode* root){
+        int maxi=INT_MIN;
+        maxPath(root,maxi);
+        return maxi;
+    }
+   
+       
 };
 
 int main() {
