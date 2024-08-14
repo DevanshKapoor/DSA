@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-//* UDIRECTED GRAPH*//
+//* UNDIRECTED GRAPH*//
 
 //adjaceny matrix
 int main(){
@@ -38,3 +38,41 @@ int main(){
     }
     return 0;
 }
+
+
+//*DIRECTED GRAPH*//
+
+//adjaceny matrix
+int main(){
+
+    int n, m;
+
+    //1 based indexing
+    int adj[n+1][n+1];
+
+    for(int i=0;i<m;i++){
+        int u,v;
+        cin>>u>>v;
+        adj[u][v]=1;
+    }
+
+    return 0;
+}
+
+//adjacency list
+int main(){
+    int n,m;
+    cin>>n>>m;
+    //1 based indexing
+    vector<int> adj[n+1];
+
+    for(int i=0;i<m;i++){
+        int u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        //no edge from v to u
+    }
+    return 0;
+}
+
+
