@@ -59,12 +59,13 @@ public:
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
 class Solution {
 public:
     TreeNode* prev = NULL;
     void flatten(TreeNode* root) {
         
-        if(root==NULL){
+       if(root==NULL){
            return;
        }
        flatten(root->right);
@@ -74,3 +75,5 @@ public:
        prev = root;
     }
 };
+
+

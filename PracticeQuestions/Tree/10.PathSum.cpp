@@ -3,9 +3,6 @@
 // used finalsum as the carrier of remaining sum , subtracted node value from it and called its child nodes with new value
 // on reaching leaf node checked if sum is 0 or not
 
-
-
-
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
