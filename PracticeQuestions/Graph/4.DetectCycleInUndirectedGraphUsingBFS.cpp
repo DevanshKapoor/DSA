@@ -33,7 +33,7 @@ class Solution{
     bool isCycle(int V, vector<int> adj[]) {
         // Code here
         int vis[V]={0};
-        for(int i=0;i<V;i++){
+        for(int i=0;i<V;i++){// iterate over visited array to check over all connected components
             if(!vis[i]){
                 if(detectCycle(i,vis,adj)) return true;
             }
