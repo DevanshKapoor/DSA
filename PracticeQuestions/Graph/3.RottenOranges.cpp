@@ -32,7 +32,7 @@ using namespace std;
         }
         
         int tm=0;
-        int drow[]={-1,0,+1,0};
+        int drow[]={-1,0,+1,0};//delta row AND colums to generate neighbouring rows and columns
         int dcol[]={0,+1,0,-1};
         int cnt=0;
         while(!q.empty()){
@@ -62,7 +62,7 @@ using namespace std;
         return tm;
         
     }
-    
+
 int main(){
 
     return 0;
