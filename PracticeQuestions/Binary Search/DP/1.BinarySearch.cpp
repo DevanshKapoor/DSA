@@ -6,13 +6,13 @@ using namespace std;
 //TC : O(log n)
 class Solution {
     public:
-    bool binarySearch(vector<int>& vec, int key, int l, int r){
+    int binarySearchRecursive(vector<int>& vec, int key, int l, int r){
         if(l>r){
-            return false;
+            return -1; //returns -1 if no index with key element
         }
         int mid=(l+r)/2;
         if(key==vec[mid]){
-            return true;
+            return mid; //returns the index
         }
         else if(key<vec[mid]){
             
@@ -23,6 +23,26 @@ class Solution {
         }
 
     }
+
+    int binarySearchIterative(vector<int>& vec, int key){
+        int l=0;
+        int r=vec.size()-1;
+        int mid=-1;
+        while(l<=r){
+            mid=(l+r)/2;
+            if(key==vec[mid]){
+                return mid;
+            }
+            else if(key<vec[mid]){
+                r=mid-1;
+            }
+            else{
+                l=mid+1;
+            }
+
+        }
+        return -1;
+    }
     
 };
 
@@ -31,8 +51,7 @@ int main(){
     int r=arr.size()-1;
     int key=11;
     Solution sol;
-    cout<<"answer is "<<sol.binarySearch(arr,key,0,r);
+    cout<<"answer is "<<sol.binarySearchRecursive(arr,key,0,r);
     
     return 0;
-}return 0;
 }
