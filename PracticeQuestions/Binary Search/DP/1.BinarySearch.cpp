@@ -3,23 +3,23 @@
 
 using namespace std;
 //recursive binary search
-
+//TC : O(log n)
 class Solution {
     public:
     bool binarySearch(vector<int>& vec, int key, int l, int r){
-        int temp=(l+r)/2;
-        if(l>r && key!=vec[temp]){
+        if(l>r){
             return false;
         }
-        if(key==vec[temp]){
+        int mid=(l+r)/2;
+        if(key==vec[mid]){
             return true;
         }
-        else if(key<vec[temp]){
+        else if(key<vec[mid]){
             
-            return binarySearch(vec,key,l,temp-1);
+            return binarySearch(vec,key,l,mid-1);
         }
         else{
-            return binarySearch(vec,key,temp+1,r);
+            return binarySearch(vec,key,mid+1,r);
         }
 
     }
