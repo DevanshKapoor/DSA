@@ -16,10 +16,10 @@ class Solution {
         }
         else if(key<vec[mid]){
             
-            return binarySearch(vec,key,l,mid-1);
+            return binarySearchRecursive(vec,key,l,mid-1);
         }
         else{
-            return binarySearch(vec,key,mid+1,r);
+            return binarySearchRecursive(vec,key,mid+1,r);
         }
 
     }
@@ -49,9 +49,9 @@ class Solution {
 int main(){
     vector<int> arr={1,2,3,4,5,6,7,8,9,10};
     int r=arr.size()-1;
-    int key=11;
+    int key=3;
     Solution sol;
-    cout<<"answer is "<<sol.binarySearchRecursive(arr,key,0,r);
-    
+    cout<<"answer is "<<sol.binarySearchIterative(arr,key)<<endl;
+    cout<<"answer is "<<sol.binarySearchRecursive(arr,key,0,r)<<endl;
     return 0;
 }
