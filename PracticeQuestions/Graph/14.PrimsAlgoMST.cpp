@@ -8,10 +8,10 @@ public:
 	//Function to find sum of weights of edges of the Minimum Spanning Tree.
 	int spanningTree(int V, vector<vector<int>> adj[])
 	{
-		set<pair<int,int>> st;
+		set<pair<int,int>> st;// {wt, node}
 
 		vector<int> vis(V, 0);
-		// {wt, node}
+		
 		st.insert({0, 0});
 		int sum = 0;
 		while (!st.empty()) {
