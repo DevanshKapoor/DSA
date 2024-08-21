@@ -12,8 +12,7 @@ class Solution{
         for(int node: adj[start]){
             if(vis[node]!=1){
                 if(dfs(node, start, adj, vis)==true) return true;
-                
-                
+                     
             }
             else if(parent!=node) return true;
             
