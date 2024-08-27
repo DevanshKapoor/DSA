@@ -1,3 +1,7 @@
+#include <iostream>
+#include<queue>
+#include<vector>
+using namespace std;
 // leetcode link:https://leetcode.com/problems/course-schedule-ii/
 
 class Solution {

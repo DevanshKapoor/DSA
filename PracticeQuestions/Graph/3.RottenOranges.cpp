@@ -11,7 +11,7 @@ using namespace std;
         int n=grid.size();
         int m=grid[0].size();
         
-        queue<pair<pair<int,int>,int>> q;
+        queue<pair<pair<int,int>,int>> q; //{{row,column},time}
         
         int countFresh=0;//retrun -1 if this count is not 0 at end
         int vis[n][m];
