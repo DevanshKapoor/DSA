@@ -6,8 +6,8 @@ class Solution
 {
 public:
 	//Function to find sum of weights of edges of the Minimum Spanning Tree.
-	int spanningTree(int V, vector<vector<int>> adj[])
-	{
+	int spanningTree(int V, vector<vector<int>> adj[]){
+		
 		set<pair<int,int>> st;// {wt, node}, If we wish to store the mst of the graph, 
                               //the set(or priority queue) should instead store the triplets 
                               //(edge weight, adjacent node, parent node)
