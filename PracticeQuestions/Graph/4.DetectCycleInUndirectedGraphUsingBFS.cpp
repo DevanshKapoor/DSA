@@ -25,6 +25,8 @@ class Solution{
                 else if(parent!=n) return true;
             }
         }
+
+        
         
         return false;
     }
