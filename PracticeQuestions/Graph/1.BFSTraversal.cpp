@@ -1,13 +1,16 @@
 #include <iostream>
-#include<bits/stdc++.h>
+#include<vector>
+#include<queue>
 using namespace std;
 
 //0 based indexing
 
 vector<int> bfsTraversal(int n, vector<int> adj[]){
+    // n can be int n = sizeof(adj)/sizeof(adj[0])
     vector<int> bfs;
     queue<int> q;
-    int vis[n]={0};
+    vector<int> vis(n,0);
+    // OR  int vis[n]={0};
     vis[0]=1;// starting node is 0
     q.push(0);
 
@@ -16,10 +19,10 @@ vector<int> bfsTraversal(int n, vector<int> adj[]){
         q.pop();
         bfs.push_back(node);
 
-        for(auto it: adj[node]){
-            if(!vis[it]){
-                vis[it]=1;
-                q.push(it);
+        for(int i: adj[node]){
+            if(!vis[i]){
+                vis[i]=1;
+                q.push(i);
             }
         }
     }
