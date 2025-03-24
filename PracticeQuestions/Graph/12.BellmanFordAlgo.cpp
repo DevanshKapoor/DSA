@@ -5,14 +5,15 @@ using namespace std;
 class Solution {
 public:
 	/*  Function to implement Bellman Ford
-	*   edges: vector of vectors which represents the graph
+	*   edges: vector of vectors which represents the graph in the form:- (u,w,wt)
 	*   S: source vertex to start traversing graph with
 	*   V: number of vertices
 	*/
-	vector<int> bellman_ford(int V, vector<vector<int>>& edges, int S) {
-		vector<int> dist(V, 1e8);
+	//Relax all the edges N-1 times sequentially
+	vector<int> bellman_ford(int N, vector<vector<int>>& edges, int S) {
+		vector<int> dist(N, 1e8);
 		dist[S] = 0;
-		for (int i = 0; i < V - 1; i++) {
+		for (int i = 0; i < N - 1; i++) {
 			for (auto it : edges) {
 				int u = it[0];
 				int v = it[1];
@@ -31,7 +32,6 @@ public:
 				return { -1};
 			}
 		}
-
 
 		return dist;
 	}

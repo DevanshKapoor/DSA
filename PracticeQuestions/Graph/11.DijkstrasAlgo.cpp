@@ -14,14 +14,13 @@ class Solution{
 	//Function to find the shortest distance of all the vertices
     //from the source vertex S.
 
-    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S){
+    vector <int> dijkstra(int V, vector<vector<pair<int, int>>> adj[], int S){
         // Code here
         set<pair<int,int>> st; // stores(distance,node)
-        vector<int> dist(V, 1e9);
+        vector<int> dist(V, 1e8);
+        dist[S]=0;
         st.insert({0,S});//node S(source node) with 0 distance
 
-        dist[S]=0;
-    
         while(!st.empty()){
             auto it=*(st.begin());
             int node=it.second;
