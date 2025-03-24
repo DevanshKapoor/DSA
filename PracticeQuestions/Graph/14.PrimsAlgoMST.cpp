@@ -14,7 +14,7 @@ public:
 								
 		vector<int> vis(V, 0);
 		
-		st.insert({0, 0});
+		st.insert({0, 0 /*,parent ie -1 for starting nod*/});
 		int sum = 0;
 		while (!st.empty()) {
 			auto it = *(st.begin());
