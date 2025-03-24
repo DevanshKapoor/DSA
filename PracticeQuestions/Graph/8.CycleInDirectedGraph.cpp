@@ -3,7 +3,8 @@
 #include<vector>
 using namespace std;
 //GFG PROBLEM LINK: https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=detect-cycle-in-a-directed-graph
-  
+// for cycle to occur in directed graph , the node has to be visited again on the "same path"
+//(undirected mai toh kahi aur se bhi visit ho jaati tab bhi cycle hi hoti)
 class Solution{
     private:    
     bool dfsCycle(int node, int vis[], int pathVis[], vector<int> adj[]){
