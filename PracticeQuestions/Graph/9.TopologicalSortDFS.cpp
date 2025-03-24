@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 //GFG PROBLEM LINK: https://www.geeksforgeeks.org/problems/topological-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=topological-sort
+//Topological sort arranges nodes in a DAG so that each node comes before the nodes it points to.
 //intution: i stored the node whose dfs was completed in a stack
 
 
