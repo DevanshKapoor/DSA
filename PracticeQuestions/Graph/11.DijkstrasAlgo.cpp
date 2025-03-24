@@ -23,10 +23,9 @@ class Solution{
 
         while(!st.empty()){
             auto it=*(st.begin());
+            st.erase(it);
             int node=it.second;
             int dis=it.first;
-            
-            st.erase(it);
             
             for(auto it: adj[node]){
                 int adjNode=it[0];
