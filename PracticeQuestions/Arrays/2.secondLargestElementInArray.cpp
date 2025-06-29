@@ -44,6 +44,9 @@ class Solution {
                 slargest=largest;
                 largest=arr[i];
             }
+            else if (arr[i]>slargest){
+                slargest=arr[i];
+            }
         }
 
         return slargest;
