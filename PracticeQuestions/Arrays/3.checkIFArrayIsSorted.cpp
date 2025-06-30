@@ -24,4 +24,5 @@ int main(){
     sorted2=sol.isSorted(arr1,7);
     cout<<sorted1<<"\n";
     cout<<sorted2;
+    
 }
