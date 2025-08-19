@@ -17,7 +17,7 @@ long long int totalHours(vector<int> &v, int hourly){
     long long int totalH=0;
     int n=v.size();
     for(int i=0;i<n;i++){
-        totalH +=ceil((double)v[i]/(double)hourly);//dividing integer by integer will always yield integer, so we type casted both numbers to double to get cprrect answer
+        totalH +=ceil((double)v[i]/(double)hourly);//dividing integer by integer will always yield integer, so we type casted both numbers to double to get correct answer
     }
 
     return totalH;
