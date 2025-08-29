@@ -7,6 +7,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+
 //memoization
 bool f(int ind, int target, vector<int> &arr, vector<vector<int>> &dp) {
 
@@ -32,7 +33,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
     vector<vector<bool>> dp(n, vector<bool>(k+1, 0));
 
     for(int i = 0; i<n; i++) dp[i][0] = true;
-    dp[0][arr[0]] = true;
+    if(arr[0]<=k) dp[0][arr[0]] = true;
 
     for(int ind = 1; ind<n; ind++) {
         for(int target = 1; target<=k; target++) {
@@ -44,5 +45,5 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
     }
 
     return dp[n-1][k];
-    
+
 }
