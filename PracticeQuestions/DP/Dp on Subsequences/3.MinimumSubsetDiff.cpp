@@ -1,6 +1,6 @@
 //question:https://takeuforward.org/plus/dsa/problems/partition-a-set-into-two-subsets-with-minimum-absolute-sum-difference
 
-
+// question: https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
 //does not handle 0 elements in array or negative elements
 //here all numbers are positive
 //similar to subset sum problem

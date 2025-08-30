@@ -88,6 +88,24 @@ public:
         }
     }
 
+    void buildHeap(int arr[], int n){
+        for(int i = n / 2; i > 0; i--){
+            heapify(arr, n, i);
+        }
+    }
+
+
+    void heapSort(int arr[], int n){
+        int size = n;
+        while(size > 1){
+            // Step 1: Swap the root (maximum element) with the last element
+            swap(arr[1], arr[size]);
+            size--;
+            // Step 2: Heapify the root element to maintain the heap property
+            heapify(arr, size, 1);
+        }
+    }
+
     // --- CORRECTED METHOD ---
     void printHeap(){
         // The loop must go up to and including the size
