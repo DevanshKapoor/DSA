@@ -23,10 +23,24 @@ Node* convertArr2LL(vector<int> &arr){
     return head;
 }
 
+Node* deleteHead(Node* head){
+    if(head==NULL) return NULL;
+    Node* temp=head;
+    head=head->next;
+    delete temp;
+    return head;
+}
+
 int main(){
     Node* y=new Node(5);
     cout<<y->data<<endl;
-    vector<int> arr={1,2,3,4,5};
+    vector<int> arr(5);
+    arr.push_back(1);
+    arr.push_back(2);
+    arr.push_back(3);
+    arr.push_back(4);
+    arr.push_back(5);
+    
     Node* head=convertArr2LL(arr);
     Node* temp=head;
     while(temp!=NULL){
