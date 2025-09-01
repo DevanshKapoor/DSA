@@ -9,8 +9,7 @@ using namespace std;
 
 int mod =(int)1e9+7;
 
-int countPartitionsUtil(int ind, int target, vector<int>& arr, vector<vector
-<int>> &dp){
+int countPartitionsUtil(int ind, int target, vector<int>& arr, vector<vector<int>> &dp){
 
      if(ind == 0){
         if(target==0 && arr[0]==0)
