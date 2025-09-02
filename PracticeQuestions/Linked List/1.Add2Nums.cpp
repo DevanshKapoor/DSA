@@ -17,6 +17,10 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        // pointers are passed by value
+        // so temps not actually needed
+        // if you ever want to pass a pointer by reference use & (eg: int* &x)
+        
         ListNode* temp1=l1;
         ListNode* temp2 =l2;
         ListNode* l3= NULL;
